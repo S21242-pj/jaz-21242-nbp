@@ -17,11 +17,11 @@ public class NbpService {
         this.restTemplate = restTemplate;
         this.nbpRepository = nbpRepository;
     }
-
+/*
     public DatabaseEntrace saveDataRangeAndCurrency(String currencyName, Integer firstDate, Integer lastDate, double avgCurrency){
         DatabaseEntrace databaseEntrace = new DatabaseEntrace(currencyName, firstDate, lastDate, avgCurrency);
         return curRep.save
-    }
+    }*/
 
 
 }
