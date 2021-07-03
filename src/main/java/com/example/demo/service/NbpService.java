@@ -1,5 +1,6 @@
 package com.example.demo.service;
 
+import com.example.demo.model.EntryToDatabase;
 import com.example.demo.repository.NbpRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;

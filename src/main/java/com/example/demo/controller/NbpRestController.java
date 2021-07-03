@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 
 import com.example.demo.service.NbpService;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,7 +16,7 @@ public class NbpRestController {
         this.nbpService = nbpService;
     }
 
-
+    @ApiOperation(value = "")
 
 
 }
