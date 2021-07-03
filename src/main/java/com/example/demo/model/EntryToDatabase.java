@@ -1,6 +1,5 @@
 package com.example.demo.model;
 
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 import javax.persistence.Entity;
@@ -13,35 +12,34 @@ import java.util.Calendar;
 import java.util.Date;
 
 @Entity
-public class DatabaseEntrace {
+public class EntryToDatabase {
 
+    @ApiModelProperty(notes = "Date + hours when avg price was taken", required = true, dataType = "String")
+    private final String createDate = createDate();
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @ApiModelProperty(notes = "Number ID", required = true, dataType = "Long")
     private Long Id;
-
     @ApiModelProperty(notes = "Currency name", required = true, dataType = "String")
     private String currency;
-
     @ApiModelProperty(notes = "Days number", required = true, dataType = "Integer")
     private Integer daysNumber;
-
     @ApiModelProperty(notes = "Average prise from number of days", required = true, dataType = "Double")
     private Double avgPrices;
 
-    @ApiModelProperty(notes = "Date + hours when avg price was taken", required = true, dataType = "String")
-    private final String createDate = createDate();
-
-    public String createDate(){
-        Date d = Calendar.getInstance().getTime();
-        DateFormat df = new SimpleDateFormat("yyyy.mm.dd HH");
-        return df.format(d);
+    public EntryToDatabase() {
     }
-    
-    public DatabaseEntrace(String currency, Integer daysNumber, Double avgPrices) {
+
+    public EntryToDatabase(String currency, Integer daysNumber, Double avgPrices) {
         this.currency = currency;
         this.daysNumber = daysNumber;
         this.avgPrices = avgPrices;
+    }
+
+    public String createDate() {
+        Date d = Calendar.getInstance().getTime();
+        DateFormat df = new SimpleDateFormat("yyyy.mm.dd HH");
+        return df.format(d);
     }
 
     public Long getId() {
