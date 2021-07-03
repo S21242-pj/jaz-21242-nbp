@@ -16,7 +16,6 @@ public class NbpRestController {
         this.nbpService = nbpService;
     }
 
-    @ApiOperation(value = "")
 
 
 }
