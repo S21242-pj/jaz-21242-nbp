@@ -1,4 +1,10 @@
 package com.example.demo.repository;
 
-public interface NbpRepository {
+import com.example.demo.model.Root;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface NbpRepository extends JpaRepository<Root, Long> {
+
 }

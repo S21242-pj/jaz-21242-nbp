@@ -8,5 +8,8 @@ public class NbpService {
 
     private final RestTemplate restTemplate;
 
+    public NbpService(RestTemplate restTemplate) {
+        this.restTemplate = restTemplate;
+    }
 
 }
