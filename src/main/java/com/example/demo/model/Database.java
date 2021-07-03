@@ -12,11 +12,15 @@ public class Database {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @ApiModelProperty(notes = "id number", required = true, dataType = "Long")
+    @ApiModelProperty(notes = "Number ID", required = true, dataType = "Long")
     private Long Id;
 
-    @ApiModelProperty(notes = "currency name", required = true, dataType = "String")
+    @ApiModelProperty(notes = "Currency name", required = true, dataType = "String")
     private String currency;
+
+    @ApiModelProperty(notes = "Days number", required = true, dataType = "Integer")
+    private Integer daysNumber;
+
 
 
 
